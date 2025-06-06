@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 220px;
+            position: absolute;
+            top: 1%;
+            border-radius: 15px;
+            left: 2%;
+        }
+
+        #bo {
+            display: flex;
+        }
+
+        #page1, #page {
+            background-color: ;
+            color: rgb(0, 0, 0);
+            display: flex;
+            gap: 2%;
+            height: 110px;
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            padding-left: 130px;
+        }
+
+        #p1 {
+            background-color: rgb(255, 252, 252);
+            position: relative;
+            border-radius: 20px;
+            width: 230px;
+            height: 400px;
+            border: solid 0.1px black;
+            transition: 0.5s;
+        }
+
+        #p1 #s {
+            padding: 40%;
+            transform: translateY(-30%);
+        }
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #navbar {
+            display: flex;
+            padding-left: 800px;
+            gap: 30px;
+            background-color: black;
+            padding-bottom: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            padding-left: 30px;
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+        }
+
+        button {
+            border-radius: 10px;
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        button:hover {
+            color: rgb(197, 196, 196);
+            background-color: black;
+        }
+
+        #explore {
+            color: gray;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: black;
+            transform: translateY(120%);
+        }
+
+        #link div {
+            color: #030505;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            padding-left: 340px;
+        }
+
+        #link tr {
+            padding-top: 4px;
+        }
+
+        #search-bar {
+            margin: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        #bo{
+            transform: translateY(340px);
+        }
+        
+        .product-card {
+            position: relative;
+            background-color: rgb(255, 252, 252);
+            border-radius: 20px;
+            width: 230px;
+            height: 400px;
+            border: solid 0.1px black;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 220px;
+            border-radius: 15px;
+        }
+
+        .product-card h2, .product-card h3 {
+            margin: 10px;
+        }
+        #pr{
+            position: absolute;
+            z-index: 90;
+            top: 60%;
+        }
+        #page{
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<section id="navbar">
+    <nav>
+        <h3 style="background-color:Brown"></h3>
+        <a href="dev2.html">Home</a>
+        <a href="file:///C:/Users/TEST/OneDrive/Desktop/jessi1/login.html">login</a>
+        <a href="file:///C:/Users/TEST/OneDrive/Desktop/jessi1/order.html">order</a>
+        <a href="file:///C:/Users/TEST/OneDrive/Desktop/jessi1/con.html">contact us</a>
+    </nav>
+</section>
+
+<center><h1>Men section</h1></center>
+
+
+<input type="text" id="search-bar" placeholder="Search for a product..." onkeyup="filterProducts()" />
+
+<section id="page" class="product-container">
+    
+    <div class="product-card" data-name="Nike under 1280">
+        <img src="c1.jpg" alt="Nike Shoes">
+        <div id="pr">
+        <h2>Nike</h2>
+        <h3>$1280</h3>
+        </div>
+        
+        <div id="bo">
+            
+            <div>
+                
+                <a><button>Buy</button></a>
+               
+            </div>
+            <div>
+                ⭐⭐⭐⭐
+            </div>
+            <br>
+           
+            
+        </div>
+    </div>
+
+    <div class="product-card" data-name="bata under 320 " >
+        <img src="c2.jpeg" alt="Nike Shoes">
+        <div id="pr">
+        <h2>Bata</h2>
+        <h3>$320</h3>
+        </div>
+        
+        <div id="bo">
+            
+            <div>
+                
+                <a><button>Buy</button></a>
+               
+            </div>
+            <div>
+                ⭐⭐⭐⭐
+            </div>
+            <br>
+           
+            
+        </div>
+    </div>
+
+    <div class="product-card" data-name="sports under 280">
+        <img src="c3.jpeg" alt="Nike Shoes">
+        <div id="pr">
+        <h2>sports</h2>
+        <h3>$280</h3>
+        </div>
+        
+        <div id="bo">
+            
+            <div>
+                
+                <a><button>Buy</button></a>
+               
+            </div>
+            <div>
+                ⭐⭐⭐⭐
+            </div>
+            <br>
+           
+            
+        </div>
+    </div>
+
+
+    <div class="product-card" data-name="bata under 480">
+        <img src="c4.jpeg" alt="Nike Shoes">
+        <div id="pr">
+        <h2>bat</h2>
+        <h3>$480</h3>
+        </div>
+        
+        <div id="bo">
+            
+            <div>
+                
+                <a><button>Buy</button></a>
+               
+            </div>
+            <div>
+                ⭐⭐⭐⭐
+            </div>
+            <br>
+           
+            
+        </div>
+    </div>
+
+    <div class="product-card" data-name="Nike under 380">
+        <img src="c5.jpeg" alt="Nike Shoes">
+        <div id="pr">
+        <h2>Nike</h2>
+        <h3>$380</h3>
+        </div>
+        
+        <div id="bo">
+            
+            <div>
+                
+                <a><button>Buy</button></a>
+               
+            </div>
+            <div>
+                ⭐⭐⭐⭐
+            </div>
+            <br>
+           
+            
+        </div>
+    </div>
+
+    <div class="product-card" data-name="sports under 380">
+        <img src="c6.jpeg" alt="Nike Shoes">
+        <div id="pr">
+        <h2>sports</h2>
+        <h3>$380</h3>
+        </div>
+        
+        <div id="bo">
+            
+            <div>
+                
+                <a><button>Buy</button></a>
+               
+            </div>
+            <div>
+                ⭐⭐⭐⭐
+            </div>
+            <br>
+           
+            
+        </div>
+    </div>
+    <div class="product-card" data-name="Nike under 8000">
+        <img src="c7.jpeg" alt="Nike Shoes">
+        <div id="pr">
+        <h2>Nike</h2>
+        <h3>$8000</h3>
+        </div>
+        
+        <div id="bo">
+            
+            <div>
+                
+                <a><button>Buy</button></a>
+               
+            </div>
+            <div>
+                ⭐⭐⭐⭐
+            </div>
+            <br>
+           
+            
+        </div>
+    </div> <div class="product-card" data-name="bata under 3000">
+        <img src="c8.jpeg" alt="Nike Shoes">
+        <div id="pr">
+        <h2>Bata</h2>
+        <h3>$3000</h3>
+        </div>
+        
+        <div id="bo">
+            
+            <div>
+                
+                <a><button>Buy</button></a>
+               
+            </div>
+            <div>
+                ⭐⭐⭐⭐
+            </div>
+            <br>
+           
+            
+        </div>
+    </div>
+    <div class="product-card" data-name="bata under 5000">
+        <img src="c9.jpeg" alt="Nike Shoes">
+        <div id="pr">
+        <h2>Bata</h2>
+        <h3>$5000</h3>
+        </div>
+        
+        <div id="bo">
+            
+            <div>
+                
+                <a><button>Buy</button></a>
+               
+            </div>
+            <div>
+                ⭐⭐⭐⭐
+            </div>
+            <br>
+           
+            
+        </div>
+    </div>
+    <div class="product-card" data-name="Nike under 9000">
+        <img src="c10.jpeg" alt="Nike Shoes">
+        <div id="pr">
+        <h2>Nike</h2>
+        <h3>$9000</h3>
+        </div>
+        
+        <div id="bo">
+            
+            <div>
+                
+                <a><button>Buy</button></a>
+               
+            </div>
+            <div>
+                ⭐⭐⭐⭐
+            </div>
+            <br>
+           
+            
+        </div>
+    </div>
+
+   
+</section>
+
+<script>
+    
+    function filterProducts() {
+        const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+        const products = document.querySelectorAll('.product-card');
+        
+        products.forEach((product) => {
+            const productName = product.getAttribute('data-name').toLowerCase();
+            if (productName.includes(searchTerm)) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

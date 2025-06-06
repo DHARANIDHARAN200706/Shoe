@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100%">
+    <title>Document</title>
+    <link rel="stylesheet" href="s1.css">
+</head>
+<body>
+
+    <script>
+        document.getElementById('sh').addEventListener('submit', function(event) {
+    event.preventDefault();  
+    var firstName = document.getElementById('first-name').value;
+    var lastName = document.getElementById('last-name').value;
+    var email = document.getElementById('email').value;
+    var online = document.getElementById('se1').checked;
+    var inPerson = document.getElementById('se2').checked;
+    var sessionPref = document.querySelector('select').value;
+    var eventDate = document.getElementById('ev').value;
+    var additionalCommands = document.getElementById('additional-commands').value;
+
+   
+    if (!firstName || !lastName || !email || !additionalCommands) {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+   
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if (!email.match(emailPattern)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    
+    if (!online && !inPerson) {
+        alert("Please select an attendance type (Online or Inperson).");
+        return;
+    }
+
+   
+    if (!sessionPref) {
+        alert("Please select a session preference.");
+        return;
+    }
+
+    
+    if (!eventDate) {
+        alert("Please select an event date.");
+        return;
+    }
+
+    
+    alert("Form submitted successfully!");
+    this.submit(); 
+});
+
+    </script>
+    <style>
+    *{
+        color: white;
+    }
+
+    
+    body {
+        background: url(s3.avif);
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: fixed;
+        
+    }
+
+    #f {
+        display: flex;
+        position: absolute;
+        left: 550px;
+        top: 0%;
+        padding: 30px;
+       
+
+       
+    }
+    #sh{
+        p
+    }
+
+    input{
+        color: white;
+    }
+    #rk{
+        align-items: center;
+       
+        background: transparent;
+        position: relative;
+        right: 100px;
+        padding: 30px;
+        padding-top: 70px;
+       
+       
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: solid 1px white;
+
+    }
+    h2{
+        position: absolute;
+        z-index: 4;
+        left:60px;
+        top: 15%;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(0, 53, 10);
+    }
+
+    input, textarea, select {
+        border: none;
+        outline: none;
+        border-bottom: solid 1px rgb(5, 75, 12);
+        background-color: transparent;
+        padding: 5px;
+        font-size: 16px;
+        width: 330px;
+    }
+    textarea{
+        height: 10px;
+    }
+   
+    #s {
+        position: relative;
+        margin-bottom: 20px;
+        width: 300px;
+    }
+
+    #s label {
+        position: absolute;
+        left: 5px;
+        top: 20px;
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        pointer-events: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        transition: 0.3s ease;
+    }
+    #m{
+        padding: 1px;
+       
+    }
+
+    #s input:focus ~ label,
+    #s input:valid ~ label,
+    #s textarea:focus ~ label,
+    #s textarea:valid ~ label,
+    #s select:focus ~ label {
+        top: 7px;
+        left: 0;
+        font-size: 12px;
+        color: rgb(8, 81, 35);
+    }
+
+   
+
+    textarea {
+        height: 20px;
+        resize: none;
+    }
+
+    div {
+        padding-top: 20px;
+
+    }
+    button{
+        padding: 10px;
+        border-radius: 12px;
+        border: none;
+        position: relative;
+        left: 0.3%;
+        width: 300px;
+    }
+    #ev{
+        color: white;
+
+    }
+    label{
+       color: white;
+    }
+    select{
+        color: white;
+        background-color: rgba(0, 100, 0, 0.195);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        width: 100%;
+    }
+    select:focus{
+        color: white;
+        background-color: rgba(2, 72, 14, 0.148);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+
+    }
+    button:hover{
+        background-color: rgb(6, 68, 31);
+        color: white;
+       
+    }
+    #event-day:focus{
+        color: white;
+        font-size: 8px;
+    }
+    #l label{
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-bottom: 15px;
+       
+    }
+    nav{
+        display: flex;
+        align-items:end;
+        justify-content:flex-end;
+        padding: 20px 80px;
+        
+
+        border-radius:50px;
+        display:flex
+        padding: 10px;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 10000;
+    }
+    a{
+        
+    }
+    #navbar a{
+        text-decoration: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-size-adjust: 100px;
+        text-size-adjust: 100px;
+        font-size: 25px;
+        color: rgb(13, 73, 4);
+        padding-left: 10px;
+        gap: 10px;
+        padding-right: 10px;
+        
+       
+       
+
+
+    }
+
+    #navbar a:hover{
+        background: transparent;
+        backdrop-filter: blur(200px);
+        border-radius:7px ;
+        
+        font-size: 25px;
+        
+       
+    }
+    video{
+        position: relative;
+        width: 150%;
+        top: 0%;
+    }
+    nav{
+        position: fixed;
+        
+
+    }
+    a{
+        color: rgb(4, 54, 6);
+    }
+    #f{
+        position: absolute;
+        top: 0%;
+        left: 40%;
+        z-index: 9999;
+        
+    }
+    #f h2{
+        left: 17%;
+    }
+   #s{
+    padding-left: 5%;
+   }
+   #button{
+    color: rgb(255, 255, 255);
+    font-size: 90%;
+    left: 14%;
+    background-color: rgb(5, 85, 49);
+    border-bottom: 0px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 4%;
+   }
+   #button:hover{
+    background-color: white ;
+    color: rgb(7, 79, 45);
+    backdrop-filter: blur(100px);
+   }
+
+   #summa img{
+    
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    top: 80%;
+    height: 20%;}
+
+    input:checked{
+        color: darkgreen ;
+    }
+    input::after{
+        color: darkgreen ;
+    }
+    #se1{
+        padding-top: 100px;
+        position: absolute;
+        left: 20.4%;
+    }
+    
+
+
+
+    
+</style>
+
+<style>
+    nav{
+   color: black;
+   gap: 30px;
+   transform: ;
+   padding-bottom: 50px;
+   
+  
+  }
+  a{
+   padding-left: 30px;
+   color: black;
+   text-decoration: none;
+   transform: translatez(50%);
+   z-index: 5000000;
+   font-size: 30px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  }
+  a:hover{
+   color: aqua;
+  }
+</style>
+
+   <section id="navbar">
+       <nav>
+          
+          <a href="home.html">home</a>
+          <a href="mou.html" >login</a>
+          
+          <a href="product.html">order</a>
+          
+          <a href="cont.html">contact</a>
+          <a href="TRENDING/trending.html">Trending</a>
+         
+
+         
+      </nav>
+   
+   </section>
+
+    
+
+    <section id="img">
+        <div id="vig"> </div>
+        <img src="img/background.png" data-speedx="0.3" data-speedy="0.4" class="par bg">
+        <img src="img/fog_7.png" data-speedx="0.163" data-speedy="0.32" class="par fo7">
+        <img src="img/mountain_10.png" data-speedx="0.27" data-speedy="0.01" class="par mou10">
+        <img src="img/fog_6.png" data-speedx="0.32" data-speedy="0.28" class="par fo6">
+        <img src="img/mountain_9.png"  data-speedx="0.170" data-speedy="0.58" class="par mou9">
+        <Img src="img/mountain_8.png" data-speedx="0.150"data-speedy="0.18" class="par mou8">
+        <img src="img/fog_5.png"data-speedx="0.50" data-speedy="0.28" class="par fo5">
+        <img src="img/mountain_7.png" data-speedx="0.42" data-speedy="0.11" class="par mou7">
+        <div class="par te">
+            <h1 class="par tex" >FOREST</h1>
+            <H2 class="par h2">BATTLEROYALE</H2>
+        </div>
+        
+
+        <img src="img/mountain_6.png" data-speedx="0.065" data-speedy="0.08" class="par mou6">
+        <img src="img/fog_4.png"data-speedx="0.135" data-speedy="0.408" class="par fo4">
+        <img src="img/mountain_5.png" data-speedx="0.23" data-speedy="0.08" class="par mou5">
+        <img src="img/fog_3.png" data-speedx="0.06" data-speedy="0.132" class="par fo3">
+        <img src="img/mountain_4.png" data-speedx="0.11" data-speedy="0.20" class="par mou4">
+        <img src="img/mountain_3.png" data-speedx="0.02" data-speedy="0.28" class="par mou3">
+        <img src="img/fog_2.png" data-speedx="0.15" data-speedy="0.128" class="par fo2">
+        <img src="img/mountain_2.png" data-speedx="0.40" data-speedy="0.308" class="par mou2">
+        <img src="img/mountain_1.png" data-speedx="0.12" data-speedy="0.4" class="par mou1">
+        <img src="img/sun_rays.png" data-speedx="0.34" data-speedy="0.7" class="par su">
+        <img src="img/black_shadow.png" data-speedx="0.164" data-speedy="0.22" class="par bs">
+        <img src="img/fog_1.png" data-speedx="0.18" data-speedy="0.38" class="par fo1">
+
+     <div id="vi"></div>
+    </section>
+    <script src="mou.js"></script>
+
+
+    <section id="navbar">
+        <nav>
+           
+           
+   
+            <nav>
+           
+                <a href="dev2.html">home</a>
+                <a href="file:///D:/rahul/jaiproj/jaiwebg/mou.html" >login</a>
+                
+                <a href="file:///C:/Users/TEST/OneDrive/Desktop/jessi1/order.html">order</a>
+                
+                <a href="cont.html">contact us</a>
+               
+     
+               
+            </nav>
+           
+           
+           <hr>
+       </nav>
+    </section>
+   
+    <section id="f">
+        <br>
+        <br>
+        <div id="card">
+    <form id="sh">
+        <div></div>
+        
+        <h2>Register</h2>
+<div id="rk">
+        <div id="s">
+            <input type="text" id="first-name" required>
+            <label for="first-name">First Name</label>
+        </div>
+
+        <div id="s">
+            <input type="text" id="last-name" required>
+            <label for="last-name">Last Name</label>
+        </div>
+
+        <div id="s">
+            <input type="email" id="email" required>
+            <label for="email">Email</label>
+        </div>
+
+       <div id="se">
+        <label>Gender</label><br>
+        <br>
+        <h1></h1> Male<input type="radio" name="a" id="se1">
+        <br>
+        <br>
+        <h1></h1>Female<input type="radio" name="a" id="se2">
+       </div>
+
+        <div id="l">
+            <label></label>
+            <br>
+<br>
+            <select required>
+                <option value="" disabled selected>Select an country</option>
+                <option value="workshop">india</option>
+                <option value="lecture">usa</option>
+                <option value="seminar">china</option>
+            </select>
+        </div>
+
+        <div id="s">
+            <input type="number" id="ev"  placeholder="+91">
+            <label >Event Day</label>
+        </div>
+
+        <div id="s">
+            <textarea id="additional-commands" required></textarea>
+            <label>Additional-Commands</label>
+           
+        </div>
+        <div>
+            <input type="submit" id="button">
+        </div>
+    </div>
+        <div id="sk"></div>
+    </form>
+    
+    </div>
+
+    </section>
+    <div id="summa">
+        <img src="1w.png">
+    </div>
+</body>
+</html>

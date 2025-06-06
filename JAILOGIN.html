@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color: white;
+        }
+        body {
+            background: url(s3.avif);
+            width: 1000px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #f {
+            display: flex;
+            position: relative;
+            left: 550px;
+            padding: 30px;
+           
+
+           
+        }
+        input{
+            color: white;
+        }
+        #rk{
+            align-items: center;
+           
+            background: transparent;
+            position: relative;
+            right: 100px;
+            padding: 30px;
+            padding-top: 70px;
+           
+           
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: solid 1px white;
+
+        }
+        h2{
+            position: absolute;
+            z-index: 4;
+            left:60px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+        }
+
+        input, textarea, select {
+            border: none;
+            outline: none;
+            border-bottom: solid 1px violet;
+            background-color: transparent;
+            padding: 5px;
+            font-size: 16px;
+            width: 300px;
+        }
+        textarea{
+            height: 10px;
+        }
+       
+        #s {
+            position: relative;
+            margin-bottom: 20px;
+            width: 300px;
+        }
+
+        #s label {
+            position: absolute;
+            left: 5px;
+            top: 20px;
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+            pointer-events: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            transition: 0.3s ease;
+        }
+        #m{
+            padding: 1px;
+           
+        }
+
+        #s input:focus ~ label,
+        #s input:valid ~ label,
+        #s textarea:focus ~ label,
+        #s textarea:valid ~ label,
+        #s select:focus ~ label {
+            top: 7px;
+            left: 0;
+            font-size: 12px;
+            color: violet;
+        }
+
+       
+
+        textarea {
+            height: 20px;
+            resize: none;
+        }
+
+        div {
+            padding-top: 20px;
+
+        }
+        button{
+            padding: 10px;
+            border-radius: 12px;
+            border: none;
+            position: relative;
+            left: 0.3%;
+            width: 300px;
+        }
+        #ev{
+            color: white;
+
+        }
+        label{
+           color: white;
+        }
+        select{
+            color: white;
+            background-color: rgb(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+        }
+        select:focus{
+            color: white;
+            background-color: blueviolet;
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+
+        }
+        button:hover{
+            background-color: rgb(150, 37, 255);
+            color: white;
+           
+        }
+        #event-day:focus{
+            color: white;
+            font-size: 8px;
+        }
+        #l label{
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-bottom: 15px;
+           
+        }
+        nav{
+            display: flex;
+            align-items:end;
+            justify-content:flex-end;
+            padding: 20px 80px;
+            
+
+            border-radius:50px;
+            display:flex
+            padding: 10px;
+            justify-content: flex-end;
+            position: relative;
+            z-index: 6;
+        }
+        #navbar a{
+            text-decoration: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-size-adjust: 100px;
+            text-size-adjust: 100px;
+            font-size: 25px;
+            color: rgb(255, 255, 255);
+            padding-left: 50px;
+            padding-right: 50px;
+           
+
+
+        }
+
+        #navbar a:hover{
+            font-size:27px;
+            font-stretch: 5px;
+            scroll-behavior: smooth;
+            text-shadow: 0px 0px 10px rgb(34, 156, 255);
+                         0px 0px 10px black;
+                         0px 0px 10px rgb(7, 238, 255);
+                         0px 0px 10px rgb(7, 238, 255);
+           
+        }
+        video{
+            position: relative;
+            width: 150%;
+            top: 0%;
+        }
+        nav{
+            position: fixed;
+
+        }
+        #f{
+            position: absolute;
+            top: 10%;
+            left: 40%;
+            
+        }
+        #f h2{
+            left: 17%;
+        }
+       #s{
+        padding-left: 5%;
+       }
+       #button{
+        color: rgb(255, 255, 255);
+        font-size: 90%;
+        left: 14%;
+        background-color: rgb(230, 0, 255);
+        border-bottom: 0px;
+        border-radius: 10px;
+        position: absolute;
+        bottom: 4%;
+       }
+       #button:hover{
+        background-color: white ;
+        color: rgb(230, 0, 255);
+        backdrop-filter: blur(100px);
+       }
+
+       
+    </style>
+</head>
+<body>
+    <section id="navbar">
+        <nav>
+           
+           
+   
+           <a href="home.html">home</a>
+           <a href="file:///C:/Users/TEST/OneDrive/Desktop/jessi1/login.html" >login</a>
+           
+           <a href="file:///C:/Users/TEST/OneDrive/Desktop/jessi1/order.html">order</a>
+           <a href="file:///C:/Users/TEST/OneDrive/Desktop/jessi1/payment.html">payment</a>
+           <a href="file:///C:/Users/TEST/OneDrive/Desktop/jessi1/feed.html">feedback</a>
+           <a href="file:///C:/Users/TEST/OneDrive/Desktop/jessi1/con.html">contact us</a>
+           <hr>
+       </nav>
+    </section>
+    <video autoplay loop muted src="cd.mp4"></video>
+    <section id="f">
+        <div id="card">
+    <form id="sh">
+        <div></div>
+        <h2>Register</h2>
+<div id="rk">
+        <div id="s">
+            <input type="text" id="first-name" required>
+            <label for="first-name">First Name</label>
+        </div>
+
+        <div id="s">
+            <input type="text" id="last-name" required>
+            <label for="last-name">Last Name</label>
+        </div>
+
+        <div id="s">
+            <input type="email" id="email" required>
+            <label for="email">Email</label>
+        </div>
+
+       <div>
+        <label>Attentence type</label><br>
+        <h1></h1> On--line<input type="radio">
+        <h1></h1>Inperson<input type="radio">
+       </div>
+
+        <div id="l">
+            <label>Session Preferences</label><br>
+            <select required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="workshop">Workshop</option>
+                <option value="lecture">Lecture</option>
+                <option value="seminar">Seminar</option>
+            </select>
+        </div>
+
+        <div id="s">
+            <input type="date" id="ev"  placeholder="xx-yy-zzzz">
+            <label >Event Day</label>
+        </div>
+
+        <div id="s">
+            <textarea id="additional-commands" required></textarea>
+            <label>Additional-Commands</label>
+           
+        </div>
+        <div>
+            <input type="submit" id="button">
+        </div>
+    </div>
+        <div id="sk"></div>
+    </form>
+    <form id="2s">
+       <center>
+        <h1>SUIBMITTED</h1>
+       </center>
+    </form>
+    </div>
+    </section>
+</body>
+</html>
+
+
+
